@@ -39,7 +39,7 @@ A ClasTool-formatted root file must be located in the same directory as the bina
 
   This is the **source** code. It iterates on the events of the input file. From each event, it will (1) read the **GSIM** bank, (2) identify the generated particles, (3) read the **EVNT** bank, (4) identify the reconstructed particles. To store each particle, it will save the iteration number (from the **GSIM** and **EVNT** iterations) into a `RVec<Int_t>` object for each kind of particle, this will allows us to do a further management of the particles. Such as sorting them by kind of particle, by momentum and by **angular matching**.
 
-* `include/GetSimpleTuple_sim.h`
+* `include/GetSimpleTuple_sim.hxx`
 
   This library is in charge of all the **input-output operations** of the `TTree` objects, as well as the **vector operations** for each `RVec<Int_t>` object, such as `SortByMomentum()` and `AngularMatching()`.
 
